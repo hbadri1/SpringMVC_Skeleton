@@ -22,6 +22,6 @@
 
 	<h2>Hello, start building your Spring MVC app!</h2>
 	<hr>
-	<a href="showForm">Hello world</a>
+	<a href="/forms/showForm">Hello world</a>
 </body>
 </html>

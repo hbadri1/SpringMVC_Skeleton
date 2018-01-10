@@ -5,29 +5,29 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/forms")
 public class HelloWorldController {
 
 	// Method to show the initial form
 
 	@RequestMapping("/showForm")
 	public String showForm() {
-		return "helloworld-form";
+		return "/forms/helloworld-form";
 	}
 
 	// Method to process the form
 	@RequestMapping("/process-form")
 	public String processForm() {
-		return "helloworld";
+		return "/forms/helloworld";
 	}
 
 	@RequestMapping("/process-form2")
-	public String processForm2(HttpServletRequest request, Model model) {
-		String theName = request.getParameter("studentName");
+	public String processForm2(@RequestParam("studentName") String theName, Model model) {
 		String res = theName.toUpperCase() + "    you are the best";
 		model.addAttribute("message", res);
-		return "helloworld";
+		return "/forms/helloworld";
 	}
-
 }
