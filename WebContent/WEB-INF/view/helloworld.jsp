@@ -4,24 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>My Skeleton app</title>
-
+<title>Hello world</title>
 <!-- CSS -->
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/main.css">
 <!-- Js -->
-<script
-	src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-
+<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </head>
 <body>
-
-	<!-- ${pageContext.request.contextPath} to access the correct root directory for your web application -->
-	<img
-		src="${pageContext.request.contextPath}/resources/images/spring.png">
-
-	<h2>Hello, start building your Spring MVC app!</h2>
+	<h3>Hello world!!</h3>
+	<br />
+	<br /> Student name: ${param.studentName}
 	<hr>
-	<a href="showForm">Hello world</a>
+	<div class="hello">${message}</div>
 </body>
 </html>

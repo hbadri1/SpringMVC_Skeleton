@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+.hello {
+	border: solid 1px green;
+}
+
+hr{
+	border-width: 5px;
+}
+
+h3{
+	color: blue;
+}
